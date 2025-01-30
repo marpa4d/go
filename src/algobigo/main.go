@@ -1,3 +1,4 @@
+// Для понимания, как достигается сложность алгоритмов O(n) и операций над данными. Примеры.
 package main
 
 import (
@@ -5,8 +6,21 @@ import (
 	"time"
 ) //TIP S
 
+func On(n int) {
+
+	timer := time.Now()
+
+	count := 0
+	for i := 0; i < n; i++ {
+		count++
+	}
+	fmt.Println("O(n):", time.Since(timer))
+}
+
 func main() {
-	t := time.Now()
-	fmt.Printf("%v", t)
-} // ee GoLand help at <a href="https://www.jetbrains.com/help/go/">jetbrains.com/help/go/</a>.
-// Also, you can try interactive lessons for GoLand by selecting 'Help | Learn IDE Features' from the main menu.
+
+	n := 10000000 // O(1)
+
+	// On - сложность O(n)
+	On(n)
+}
