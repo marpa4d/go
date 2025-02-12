@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-// On - сложность O(n)
+// On - сложность O(n)!
 func On(n int) {
 
 	timer := time.Now()
